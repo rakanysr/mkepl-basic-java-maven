@@ -13,7 +13,7 @@ public class CounterTest {
 		
 		testCounter.reset();
 		
-		assertEquals(testCounter.getCount(), 1);
+		assertEquals(testCounter.getCount(), 0);
 	}
 
 	@Test
@@ -22,7 +22,7 @@ public class CounterTest {
 		
 		for(int i = 1; i <10; i++) {
 			testCounter.increment();
-			assertEquals(testCounter.getCount(), 1);
+			assertEquals(testCounter.getCount(), i);
 		}
 	}
 
@@ -32,7 +32,7 @@ public class CounterTest {
 		
 		for(int i = 1; i <10; i++) {
 			testCounter.decrement();
-			assertEquals(testCounter.getCount(), i * 1);
+			assertEquals(testCounter.getCount(), i * -1);
 		}
 	}
 
