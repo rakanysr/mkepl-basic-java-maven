@@ -36,7 +36,6 @@ jobs:
 
     - name: Publish to GitHub Packages
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-      run: mvn -B deploy --file pom.xml -DskipTests
+      run: mvn -B deploy --file pom.xml
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_ACTOR: ${{ github.actor }}
